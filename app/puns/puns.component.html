@@ -1,0 +1,9 @@
+<StackLayout>
+    <SearchBar 
+      #keywords
+      id="searchBar" 
+      hint="Search" 
+      (submit)="keywordInputChange$.next(keywords.text)"
+      class="search-bar">
+    </SearchBar>
+</StackLayout>
