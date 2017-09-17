@@ -6,4 +6,20 @@
       (submit)="keywordInputChange$.next(keywords.text)"
       class="search-bar">
     </SearchBar>
+
+  <ListView [items]="keyword$ | async" class="list-group">
+    <ng-template let-keyword="item">
+        <Label [text]="keyword"
+        class="list-group-item"></Label>  
+    </ng-template>  
+  </ListView>   
+  
+  <ListView [items]="pun$ | async" class="list-group">
+    <ng-template let-pun="item">
+        <Label [text]="pun.pun + ' ' + pun.answer"
+        class="list-group-item"></Label>  
+    </ng-template>  
+  </ListView>   
+
 </StackLayout>
+

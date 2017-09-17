@@ -11,7 +11,9 @@ import { ItemDetailComponent } from "./item/item-detail.component";
 import { PunsComponent } from './puns/puns.component';
 import { OnepunComponent } from './onepun/onepun.component';
 
-import 'rxjs/add/operator/do';
+import 'rxjs/add/observable/of';
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/share';
 
 @NgModule({
     bootstrap: [
